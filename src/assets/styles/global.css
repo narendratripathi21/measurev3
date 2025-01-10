@@ -1,0 +1,236 @@
+/**customized tags*/
+body {
+  color: darkslategray;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: large;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+}
+a{
+  text-decoration:none;
+}
+h1 {
+  color:royalblue;
+}
+h2 {
+  color:cornflowerblue;
+}
+h3 {
+  color:darkslategray;
+}
+select{
+  color: darkslategray;
+}
+input{
+  font-size: medium;
+}
+input:focus{
+  background-color:beige;
+}
+button{
+  font-size: large;
+  color:#FEFEFA;
+  background-color: cornflowerblue;
+}
+button:hover{
+  font-weight: bold;
+  background-color: royalblue;
+}
+button::before{
+  background-color: navy;
+}
+
+/**custom classes*/
+/**application layout containers*/
+.app{
+  display: flex;
+  width:100%;
+  height: 100%;
+  flex-direction: column;
+  margin: 0px;
+  scrollbar-width: none;
+}
+/**custom generic flex containers*/
+.col{
+  display: flex;
+  align-items: center;
+}
+.row{
+  flex-direction: column;
+  align-content: center;
+}
+/**application form container*/
+.form{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  border: solid darkgray 1px;
+  margin-top: 15vh;
+  margin-left: auto;
+  margin-right:auto;
+  height: fit-content;
+  align-items: center;
+  padding:20px;
+}
+/**application header container*/
+.header{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: fit-content;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: solid 1px darkgray;
+}
+/**application content container*/
+.content{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: flex-start;
+  scrollbar-width: none;
+}
+/**application filter bar*/
+.filters{
+  display:flex;
+  flex-direction: row;
+  width:100%;
+  flex-wrap: wrap;
+  height:fit-content;
+  border: solid 1px darkgray;
+  border-radius: 10px;
+  justify-content: space-between;
+}
+/**application dashboard section*/
+.report{
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  flex-grow: 1;
+  align-items: flex-start;
+  max-height: 85vh;
+  overflow: auto;
+  scrollbar-width: none;
+}
+/**dashboard bignumbers row*/
+.bignumbers{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width:100%;
+  height: fit-content;
+  /*max-height: 20vh;*/
+  /*overflow-y: auto;*/
+}
+.charts-container{
+  display:flex;
+  flex-direction: column;
+  width:100%;
+  /*max-height: 65vh;*/
+  /*overflow: auto;*/
+}
+.charts{
+  display:flex;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  width: 100%;
+}
+/** aplication control elements*/
+.control-group{
+  z-index: 2;
+  width: 60%;
+  min-width: 100px;
+  max-width: 300px;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border:solid gray 1px;
+  margin: auto;
+  scroll-behavior: auto;
+  border-radius: 5px;
+}
+.control{
+  margin: 2px;
+  padding: 2px;
+  border-radius: 5px;
+}
+.control-static{
+  margin: 3px;
+  padding: 2px;
+}
+.control:hover{
+  color:blue;
+}
+.dropdown {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 90%;
+  right:0px;
+  background-color: #FEFEFA;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 0 5px gray;
+  padding: 2px;
+}
+.dropdown:hover .dropdown-content {
+  display: flex;
+  width:max-content;
+  flex-direction: column;
+  z-index: 1;
+}
+.form-control{
+  padding:5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  width:90%;
+  max-width: 200px;
+}
+
+/**Charts containers and design*/
+.bignumber {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-grow: 1;
+  margin:3px;
+  max-width: 250px;
+  min-width: 50px;
+  padding: 5px;
+  align-items: center;
+  text-align: center;
+  border: 1px solid grey;
+  border-radius: 20px;
+}
+.bignumber-title {
+  display: flex;
+  width: fit-content;
+  font-size: large;
+}
+.bignumber-measure {
+  display: flex;
+  width: fit-content;
+  font-size: large;
+}
+
+.chart-box {
+  flex: 1 1 300px;
+  width: calc(100%-20px);
+  min-width: 300px;
+  max-width: 900px;
+  height: 400px;
+  border-radius: 20px;
+  border: grey solid 1px;
+  margin: 5px;
+  padding: 5px;
+}
