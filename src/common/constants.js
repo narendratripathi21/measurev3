@@ -4,8 +4,8 @@ export const APP_VERSION = "Version 3.0"
 
 /**API Constants*/
 export const API_ENDPOINT = "https://jasper-sit.jio.com/measureapi/"
-export const API_LOGIN = API_ENDPOINT + 'login'
-export const API_LOGINOTP = API_ENDPOINT + 'loginotp'
+export const LOGIN_API = API_ENDPOINT + 'login'
+export const LOGINOTP_API = API_ENDPOINT + 'loginotp'
 export const UPDATEPASSWORD_API = API_ENDPOINT + 'updatepassword'
 export const UPDATEUSERNAME_API = API_ENDPOINT + 'updateusername'
 export const GETOTP_API = API_ENDPOINT + 'getotp'

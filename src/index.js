@@ -3,7 +3,8 @@ import { App } from "./app";
 import "./assets/styles/global.css"
 import React from "react";
 import { Provider } from "react-redux";
-import { store } from "./store";
+import { store } from "./common/store";
+import Notifications from "./layout/notifications";
 
 const container = document.getElementById("app");
 const root = createRoot(container)

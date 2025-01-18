@@ -1,4 +1,4 @@
-import Bignumber from "../feature/components/bignumber";
+import Bignumber from "../components/bignumber";
 
 export default function Bignumbers(){
     return(

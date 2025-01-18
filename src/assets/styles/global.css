@@ -3,9 +3,11 @@ body {
   color: darkslategray;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: large;
-  height: 100vh;
+  height: 99vh;
+  width:99vw;
   margin: 0px;
   padding: 0px;
+  scrollbar-width: none;
 }
 a{
   text-decoration:none;
@@ -24,6 +26,7 @@ select{
 }
 input{
   font-size: medium;
+  border: 1px solid gray;
 }
 input:focus{
   background-color:beige;
@@ -39,6 +42,12 @@ button:hover{
 }
 button::before{
   background-color: navy;
+}
+button:disabled{
+  background-color: gray;
+}
+button:disabled:hover{
+  font-weight: 500;
 }
 
 /**custom classes*/
@@ -104,6 +113,19 @@ button::before{
   border-radius: 10px;
   justify-content: space-between;
 }
+/**notificaton container*/
+.notifications{
+  z-index: 2;
+  display: flex;
+  position: absolute;
+  width:99vw;
+  min-height: 50px;
+  flex-direction: column-reverse;
+  margin-bottom: 0px;
+  scrollbar-width: none;
+  border: solid 1px black;
+  background-color: rgba(23, 164, 150, 0.564);
+}
 /**application dashboard section*/
 .report{
   display: flex;
@@ -140,6 +162,33 @@ button::before{
   width: 100%;
 }
 /** aplication control elements*/
+.alert-info{
+  text-align: left;
+  font-weight: bold;
+  color: whitesmoke;
+  background-color: seagreen;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 3px;
+}
+.alert-warning{
+  text-align: left;
+  font-weight: bold;
+  color: whitesmoke;
+  background-color: goldenrod;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 3px;
+}
+.alert-danger{
+  text-align: left;
+  font-weight: bold;
+  color: whitesmoke;
+  background-color: indianred;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 3px;
+}
 .control-group{
   z-index: 2;
   width: 60%;
@@ -196,7 +245,9 @@ button::before{
   width:90%;
   max-width: 200px;
 }
-
+.otp{
+  text-align: center;
+}
 /**Charts containers and design*/
 .bignumber {
   display: flex;
@@ -222,7 +273,6 @@ button::before{
   width: fit-content;
   font-size: large;
 }
-
 .chart-box {
   flex: 1 1 300px;
   width: calc(100%-20px);

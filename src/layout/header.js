@@ -1,6 +1,6 @@
 import { useState } from "react"
-import Brand from "../feature/components/brand"
-import Profile from "../feature/components/profile"
+import Brand from "../components/brand"
+import Profile from "../components/profile"
 import FormGroup from "./formgroup"
 
 export default function Header({profile}){

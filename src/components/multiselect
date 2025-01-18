@@ -1,0 +1,44 @@
+import React from 'react'
+import { useState } from 'react'
+
+const MultiSelect = ({ options, selectedOptions, setSelectedOptions }) => {
+  const [isOpen, setIsOpen] = useState(false)
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen)
+  }
+  const handleOptionChange = (option) => {
+    if (selectedOptions?.includes(option)) {
+      setSelectedOptions(selectedOptions.filter(o => o !== option && o!==''))
+    } else {
+      setSelectedOptions([...selectedOptions, option])
+    }
+  }
+
+  return (
+    <div className="multi-select">
+    <div className="multi-select-dropdown" onClick={toggleDropdown}>
+      {selectedOptions?.length > 0
+        ? selectedOptions?.join(',')
+        : 'Select options'}
+      <span className="arrow">{isOpen ? '▲' : '▼'}</span>
+    </div>
+
+    {isOpen && (
+      <div className="multi-select-options">
+        {options.map((option) => (
+          <label key={option} className="multi-select-option">
+            <input
+              type="checkbox"
+              checked={selectedOptions?.includes(option)}
+              onChange={() => handleOptionChange(option)}
+            />
+            {option}
+          </label>
+        ))}
+      </div>
+    )}
+  </div>
+  )
+}
+
+export default MultiSelect

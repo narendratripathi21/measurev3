@@ -81,9 +81,9 @@ const getLocalStorage = (key) => {
     }
 }
 
-const isActiveState = (state) => {
+const isActiveState = (profile) => {
     try{
-        let expires = new Date(state?.data?.expires??Date.now())
+        let expires = new Date(profile?.data?.expires??Date.now())
         if(expires > Date.now()){
             return true
         }

@@ -1,5 +1,5 @@
-import { UI_BASE,APP_VERSION,PROFILE_FEATURES } from '../constants'
-import profileimage from '../../assets/icons/profile.svg'
+import { UI_BASE,APP_VERSION,PROFILE_FEATURES } from '../common/constants'
+import profileimage from '../assets/icons/profile.svg'
 export default function Profile({profile}){
     const onClickDialog = (x) => {
 
